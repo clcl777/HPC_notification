@@ -14,7 +14,7 @@ class LineBotController < ApplicationController
           # ユーザーからのメッセージを取得時
           add_database(event)
           id = get_id(event)
-          message_text = "登録完了しました。あなたのIDは「#{id}」です。"
+          message_text = "登録完了しました。あなたのIDは「#{id}」です!"
           message = {
             type: 'text',
             text: message_text
@@ -28,9 +28,11 @@ class LineBotController < ApplicationController
   def notification
     id = params[:id]
     line_id = get_line_id(id)
+    emoji = ["(^O^)", "(^^)", "(^-^)", "(·∀·)", "✧٩(ˊωˋ*)و✧", "(❁´ω`❁)", "(≧▽≦)", "ｷﾀ━(ﾟ∀ﾟ)━!"]
+    emoji_num = rand(emoji.length)
     message = {
       type: 'text',
-      text: 'タスクが完了しました!'
+      text: "タスクが完了しました!　#{emoji[emoji_num]}"
     }
     client.push_message(line_id, message)
     json_test = {

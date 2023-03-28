@@ -8,8 +8,8 @@
 /server2/.bundle
 
 # Ignore the default SQLite database.
-/server2/db/*.sqlite3
-/server2/db/*.sqlite3-*
+# /server2/db/*.sqlite3
+# /server2/db/*.sqlite3-*
 
 # Ignore all logfiles and tempfiles.
 /server2/log/*

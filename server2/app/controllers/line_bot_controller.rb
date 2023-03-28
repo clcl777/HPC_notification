@@ -1,5 +1,6 @@
 class LineBotController < ApplicationController
-  protect_from_forgery except: [:sample]
+  # protect_from_forgery except: [:sample]
+  protect_from_forgery with: :null_session
   def callback
     body = request.body.read
     events = client.parse_events_from(body)

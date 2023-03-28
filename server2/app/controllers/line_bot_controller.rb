@@ -13,9 +13,10 @@ class LineBotController < ApplicationController
         case event.type
         when Line::Bot::Event::MessageType::Text
           # ユーザーからのメッセージを取得時
-          add_database(event)
-          id = get_id(event)
-          message_text = "登録完了しました。あなたのIDは「#{id}」です!"
+          # add_database(event)
+          # id = get_id(event)
+          # message_text = "登録完了しました。あなたのIDは「#{id}」です!"
+          message_text = "Hello!"
           message = {
             type: 'text',
             text: message_text

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/' => 'home#top'
   get 'profiles/index'
   get 'home' => 'home#top'
   post 'callback' => 'line_bot#callback'

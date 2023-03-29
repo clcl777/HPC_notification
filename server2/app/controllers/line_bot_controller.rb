@@ -16,7 +16,6 @@ class LineBotController < ApplicationController
           add_database(event)
           id = get_id(event)
           message_text = "登録完了しました。あなたのIDは「#{id}」です!"
-          # message_text = "Hello!"
           message = {
             type: 'text',
             text: message_text

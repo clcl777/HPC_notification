@@ -2,9 +2,9 @@ from flask import Flask, redirect
 app = Flask(__name__)
 
 
-@app.route("/")
-def hello():
-    URL = "https://hpc-notification.onrender.com/notification/1"
+@app.route("/notification/<int:id>")
+def notification(id):
+    URL = "https://hpc-notification.onrender.com/notification/" + str(id)
     return redirect(URL)
 
 

@@ -9,4 +9,4 @@ def hello():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host='localhost', port=5050)
+    app.run(host='localhost', port=5050)

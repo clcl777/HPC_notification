@@ -35,3 +35,4 @@
 /server2/config/master.key
 .DS_Store
 .env
+/server1/env

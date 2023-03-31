@@ -2,11 +2,16 @@
   <div class="container">
     <table border="1">
     <tr>
-      <th>表示名</th><th>値段</th>
+      <th>表示名</th>
+      <th>ステータスメッセージ</th>
+      <th>アイコン</th>
     </tr>
     <% @users_profiles.each do |users_profile| %>
-      <div class="posts-index-item">
-        <%= users_profile.display_name %>
-      </div>
+    <tr>
+        <td><%= users_profile.display_name %></td>
+        <td><%= users_profile.status_message %></td>
+        <td> <img width="100" height="100" src= <%=users_profile.picture_url%>> </td>
+    </tr>
     <% end %>
+    </table>
   </div>

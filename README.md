@@ -1,6 +1,9 @@
 # HPC_notification ![Pull Request](https://img.shields.io/badge/Pull%20Requests-Welcome-brightgreen)
 HPCのタスクが終了したときに通知するLINE bot
-Pull Requests Welcome!
+
+・タスクが終わってるかどうか毎回確認する必要がなくなる。
+
+・タスクをたくさん投げたときに、終わったタスクがあるかどうかわかる。
 
 # 手順
 ## 1. LINE botを追加

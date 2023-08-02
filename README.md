@@ -12,7 +12,11 @@ HPCのタスクが終了したときに通知するLINE bot
 ## 2. IDを取得
 botに「登録」と送信すると、下記のようにIDが発行される。
 
-## 3. batにコードを追加
+## 3. batに以下のコードを追加
+{id}の部分に2で取得したIDを入れる。以下のコマンドをbatファイルの最終行に記入。
+```
+curl http://localhost:5050/notification/{id}
+```
 
 # 技術スタック
 server1だけだと、Webhookが受け取れない。

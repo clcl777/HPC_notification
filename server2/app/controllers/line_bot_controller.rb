@@ -28,12 +28,16 @@ class LineBotController < ApplicationController
 
   def notification
     id = params[:id]
+    task_id = params[:task_id]
+    task_name = params[:task_name]
+    used_node = params[:used_node]
     line_id = get_line_id(id)
     emoji = ["(^O^)", "(^^)", "(^-^)", "(·∀·)", "✧٩(ˊωˋ*)و✧", "(❁´ω`❁)", "(≧▽≦)", "ｷﾀ━(ﾟ∀ﾟ)━!"]
     emoji_num = rand(emoji.length)
+    message_content = "タスクが完了しました!　#{emoji[emoji_num]}\nタスク名: #{task_name}\nタスクid: #{task_id}\n使用したノード: #{used_node}"
     message = {
       type: 'text',
-      text: "タスクが完了しました!　#{emoji[emoji_num]}"
+      text: message_content
     }
     client.push_message(line_id, message)
     json_test = {

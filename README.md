@@ -15,7 +15,7 @@ botに「登録」と送信すると、下記のようにIDが発行される。
 ## 3. batに以下のコードを追加
 {id}の部分に2で取得したIDを入れる。以下のコマンドをbatファイルの最終行に記入。
 ```
-curl http://localhost:5050/notification/{id}
+curl http://localhost:5050/notification/{id}/%CCP_JOBID%/%CCP_JOBNAME%/%COMPUTERNAME%
 ```
 
 # 技術スタック

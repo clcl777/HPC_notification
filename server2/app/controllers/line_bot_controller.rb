@@ -15,7 +15,7 @@ class LineBotController < ApplicationController
           # ユーザーからのメッセージを取得時
           add_database(event)
           id = get_id(event)
-          message_text = "登録完了しました。あなたのIDは「#{id}」です!\n以下のコマンドをbatファイルの一番下に貼り付けてください!\ncurl http://localhost:5050/notification/#{id}/%CCP_JOBID%/%CCP_JOBNAME%/%COMPUTERNAME%"
+          message_text = "登録完了しました。あなたのIDは「#{id}」です!\n以下のコマンドをbatファイルの一番下に貼り付けてください!\ncurl  \"http://localhost:5050/notification?id=#{id}&job_id=%CCP_JOBID%&job_name=%CCP_JOBNAME%&computer_name=%COMPUTERNAME%\""
           message = {
             type: 'text',
             text: message_text

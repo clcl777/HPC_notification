@@ -28,9 +28,9 @@ class LineBotController < ApplicationController
 
   def notification
     id = params[:id]
-    task_id = params[:task_id]
-    task_name = params[:task_name]
-    used_node = params[:used_node]
+    task_id = params[:job_id]
+    task_name = params[:job_name]
+    used_node = params[:computer_name]
     line_id = get_line_id(id)
     emoji = ["(^O^)", "(^^)", "(^-^)", "(·∀·)", "✧٩(ˊωˋ*)و✧", "(❁´ω`❁)", "(≧▽≦)", "ｷﾀ━(ﾟ∀ﾟ)━!"]
     emoji_num = rand(emoji.length)

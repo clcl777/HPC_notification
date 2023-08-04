@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request, jsonify
 import requests
 from dotenv import load_dotenv
 import os
@@ -13,9 +13,13 @@ def home():
     return "It works!"
 
 
-@app.route("/notification/<int:id>/<int:task_id>/<string:task_name>/<string:used_node>")
-def notification(id, task_id, task_name, used_node):
-    URL = URL_SERVER2 + "/notification/" + str(id) + "/" + str(task_id) + "/" + task_name + "/" + used_node
+@app.route("/notification", methods=['GET'])
+def notification():
+    id = request.args.get('id', '')
+    job_name = request.args.get('job_name', '') or 'No Name'
+    job_id = request.args.get('job_id', '')
+    computer_name = request.args.get('computer_name', '')
+    URL = URL_SERVER2 + "/notification/" + str(id) + "/" + str(job_id) + "/" + job_name + "/" + computer_name
     response = requests.get(URL)
     return response.text
 

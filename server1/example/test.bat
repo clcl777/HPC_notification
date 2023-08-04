@@ -1,2 +1,2 @@
-@rem http://localhost:5050/notification/{id}/%CCP_JOBID%/%CCP_JOBNAME%/%COMPUTERNAME%　idが1の場合は以下のようになる
-curl http://localhost:5050/notification/1/%CCP_JOBID%/%CCP_JOBNAME%/%COMPUTERNAME%
+@rem curl "http://localhost:5050/notification?id={id}&job_id=%CCP_JOBID%&job_name=%CCP_JOBNAME%&computer_name=%COMPUTERNAME%"　idが1の場合は以下のようになる
+curl curl "http://localhost:5050/notification?id=1&job_id=%CCP_JOBID%&job_name=%CCP_JOBNAME%&computer_name=%COMPUTERNAME%"

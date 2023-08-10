@@ -13,10 +13,10 @@ default: &default
   username: <%= Rails.application.credentials.PlanetScale[:username] %>
   host: aws.connect.psdb.cloud
   ssl_mode: verify_identity
-  sslca: "/etc/ssl/cert.pem"
 
 development:
   <<: *default
+  sslca: "/etc/ssl/cert.pem"
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -26,3 +26,4 @@ test:
 
 production:
   <<: *default
+  sslca: "/etc/ssl/certs/ca-certificates.crt"

@@ -9,16 +9,14 @@ default: &default
   database: hpc_notification
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
-
-development:
-  <<: *default
-  adapter: mysql2
-  database: hpc_notification
   password: <%= Rails.application.credentials.PlanetScale[:password] %>
   username: <%= Rails.application.credentials.PlanetScale[:username] %>
   host: aws.connect.psdb.cloud
   ssl_mode: verify_identity
   sslca: "/etc/ssl/cert.pem"
+
+development:
+  <<: *default
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

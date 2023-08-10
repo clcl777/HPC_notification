@@ -11,7 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_03_27_040015) do
-  create_table "users_profiles", force: :cascade do |t|
+  create_table "users_profiles", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "line_id"
     t.string "display_name"
     t.string "picture_url"

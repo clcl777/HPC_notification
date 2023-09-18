@@ -24,4 +24,6 @@ server1だけだと、Webhookが受け取れない。
 server2だけだと、プロキシを通すための設定がタスクに毎回必要になる。
 
 そのため、二つのサーバーを経由している。
-![stack](https://user-images.githubusercontent.com/77223796/229420309-ca8b3244-e61e-405c-af9a-04e21020dc82.png)
+![Untitled](https://github.com/clcl777/HPC_notification/assets/77223796/941067b8-8a0f-4c24-8f77-e4209fcfca9f)
+
+

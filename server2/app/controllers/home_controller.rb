@@ -1,3 +1,5 @@
 class HomeController < ApplicationController
-  def top; end
+  def top; 
+    @users_profiles = UsersProfile.all
+  end
 end
